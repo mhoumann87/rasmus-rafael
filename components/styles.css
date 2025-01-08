@@ -1,6 +1,20 @@
+:root {
+  --background: #111111;
+  --background-ac: #212121;
+  --header: #010101;
+  --text: rgb(173, 169, 169);
+  --link: rgb(128, 125, 125);
+  --link-hover: rgba(128, 125, 125, 0.7);
+  --border: #313535;
+  --headline: #ffffff;
+
+  --main-font: 'Lexend', sans-serif;
+  --display-font: 'Lexend', sans-serif;
+}
+
 body {
-  background: #111;
-  color: rgb(173, 169, 169);
+  background: var(--background);
+  color: var(--text);
 }
 
 /* Text only for screen readers */
@@ -15,6 +29,59 @@ body {
   white-space: nowrap;
   border: 0;
   display: none;
+}
+
+a {
+  color: var(--link);
+  transition: color 250ms ease-in-out;
+
+  &:is(:hover, :focus) {
+    color: var(--link-hover);
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+}
+
+h1 {
+  color: var(--headline);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-size: 2.3rem;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.nav__link {
+  font-size: 1.4rem;
+  padding: 0.5em;
+  border-radius: 10px
+  transition: all 250ms ease-in;
+
+  &:has(:hover, :focus) {
+    background-color: #fff2;
+  }
 }
 
 footer {
@@ -36,5 +103,5 @@ footer {
 
 .social-icon {
   width: 3.75rem;
-  fill: rgb(173, 169, 169);
+  fill: var(--text);
 }
