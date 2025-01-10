@@ -10,7 +10,8 @@
   --background-ac: #212121;
   --header: #010101;
   --text: rgb(173, 169, 169);
-  --link-hover: rgb(128, 125, 125);
+  --link: rgb(128, 125, 125);
+  --link-hover: rgba(128, 125, 125, 0.7);
   --border: #313535;
   --headline: #ffffff;
 
@@ -620,6 +621,7 @@ footer {
   ****************************************************************/
 
 .contact--header {
+  grid-area: main;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: 'het het' 'image image' 'text text';
