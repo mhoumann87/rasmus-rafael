@@ -1,0 +1,177 @@
+/* Reset the basic css to make all browsers show basically the same web site */
+
+/*
+  Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+  - The "symbol *" part is to solve Firefox SVG sprite bug
+*/
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing - set the calculation of elements width to maintain the outer most bax width,  */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* and set the scrolling behavior to smooth, only affects elements if you jump to a link on the page, and it is only for the people that don't have set browser behavior to reduced motion, and set a padding on top of the element we scroll to */
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    box-sizing: border-box;
+    scroll-padding-block-start: 3rem;
+  }
+}
+
+/* Remove margin on the body and set minimum hight to the screen and set the base line hight to be readable*/
+body {
+  margin: 0;
+  min-height: 100svh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Set the headings to text-wrap balances, so it put the number of characters to match each other. Browser support isn't perfect, but it is a "nice to have" when the browser supports it.
+https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* Keep the h1 margin consistent even when nested */
+h1 {
+  margin: 0.67rem 0;
+}
+
+/* For the main text we use the pretty text wrap, and set the max width for text to be 70 characters, so it is easier to read */
+p,
+li,
+figcaption {
+  max-width: 70ch;
+  text-wrap: pretty;
+}
+
+/* Natural flow and rhythm in articles by default by adding a margin top on an article that comes after another */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Make the hr line consitant between browsers */
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
+  height: 0;
+  overflow: visible;
+}
+
+/* Use the same font for inputs as for the rest of the site */
+button,
+input,
+optgroup,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* Set the image to only use the image size, and only be as wide as the container it is in. Change the alt text (if the picture doesn't show) to be in italic to stand out for the rest of the text, and put it in the middle of the line. The border style is for IE browsers */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  shape-margin: 1rem;
+  border-style: none;
+}
+
+/* Use the same font for inputs as for the rest of the site */
+button,
+input,
+optgroup,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* Remove the list style from lists and menus */
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+/* Set to block display, remove the space under the element 
+   make it responsive by default, audio without controls remain hidden */
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+audio:not([controls]) {
+  display: none;
+}
+
+/* Remove the unnecessary wrapping `picture`, while maintaining contents.
+   Source elements have nothing to display, so we hide them entirely */
+picture {
+  display: contents;
+}
+
+source {
+  display: none;
+}
+
+/* Maintain aspect ratio when max-width is applied */
+video,
+canvas {
+  height: auto;
+}
+
+/* svg files have tricked me before by not showing up in a chrome browser when using max width, so I only use the width here, the overflow hidden are for IE browser */
+svg {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
