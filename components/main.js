@@ -1,17 +1,13 @@
-// Function to add active link in the menu based on the page showing
+const navLinks = document.querySelectorAll('.nav__link');
 
-const addActive = () => {
-  const showing = window.location.href;
+const addActive = e => {
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+  });
 
-  const page = showing.substring(showing.lastIndexOf('/') + 1);
-
-  const navLinks = document.querySelectorAll('.nav__link');
-
-  const linkText = navLinks[0];
-
-  const indexLink = linkText.indexOf('/');
-
-  console.log(indexLink);
+  console.log(e.target.href);
 };
 
-addActive();
+navLinks.forEach(navLink => {
+  navLink.addEventListener('click', e => addActive(e));
+});
