@@ -1,11 +1,9 @@
 const navLinks = document.querySelectorAll('.nav__link');
 
 const addActive = e => {
-  navLinks.forEach(link => {
-    link.classList.remove('active');
+  navLinks.forEach(navLink => {
+    navLink.addEventListener('click', e => console.log(e.target));
   });
-
-  console.log(e.target.href);
 };
 
 navLinks.forEach(navLink => {
