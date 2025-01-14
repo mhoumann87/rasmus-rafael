@@ -93,6 +93,11 @@ header {
   }
 }
 
+.active {
+  background-color: #fff2;
+  color: var(--link);
+}
+
 footer {
   display: flex;
   flex-direction: column;
