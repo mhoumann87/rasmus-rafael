@@ -14,6 +14,7 @@
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -34,7 +35,6 @@ section {
 /* and set the scrolling behavior to smooth, only affects elements if you jump to a link on the page, and it is only for the people that don't have set browser behavior to reduced motion, and set a padding on top of the element we scroll to */
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
-    box-sizing: border-box;
     scroll-padding-block-start: 3rem;
   }
 }
