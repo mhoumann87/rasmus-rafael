@@ -31,6 +31,11 @@
 }
 
 .divider-top {
-  border-top: var(--border-top, 3px);
+  border-top: solid var(--border-top, 3px) var(--text);
   padding-block-start: var(--divider-padding, 2rem);
+}
+
+.divider-bottom {
+  border-block-end: solid var(--border-width, 3px) var(--text);
+  padding-block-end: 2em;
 }
