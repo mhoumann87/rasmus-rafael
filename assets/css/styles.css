@@ -8,8 +8,14 @@
   --border: #313535;
   --headline: #ffffff;
 
-  --main-font: 'Lexend', sans-serif;
-  --display-font: 'Lexend', sans-serif;
+  /* Fonts */
+  --fs-small: ;
+  --fs-reg: ;
+  --fs-med: ;
+  --fs-large: 2.3rem;
+  --fs-xl: ;
+
+  --ff-family: 'Lexend', sans-serif;
 }
 
 body {
@@ -25,7 +31,9 @@ a {
     color: var(--link-hover);
   }
 }
-
+body {
+  grid-template-columns: 1fr;
+}
 h1,
 h2,
 h3 {
@@ -37,10 +45,19 @@ h1 {
 }
 
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  padding: 0.725em;
+  border-color: var(--text);
+}
+
+.header {
+  --flex-dir: column;
+  --flex-gap: 0.875em;
+  --flex-justify: center;
+
+  & h1 {
+    font-size: var(--fs-large);
+    line-height: 1;
+  }
 }
 
 .logo-box h1 a {
