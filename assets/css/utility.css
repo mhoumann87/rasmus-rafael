@@ -12,12 +12,16 @@
   display: none;
 }
 
+/* Container to give a little space left and right and to stop the page to be larger than 1800px */
 .wrapper {
   width: calc(100vw - 2rem);
   margin-inline: auto;
-  max-width: 112.5rem;
 }
 
+@media (width > 750px) {
+  width: 95%;
+  max-width: 1800px;
+}
 .grid {
   display: grid;
 }

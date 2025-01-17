@@ -1,62 +1,94 @@
-:root {
-  --background: #111111;
-  --background-ac: #212121;
-  --header: #010101;
-  --text: rgb(173, 169, 169);
-  --link: rgb(128, 125, 125);
-  --link-hover: rgba(128, 125, 125, 0.7);
-  --border: #313535;
-  --headline: #ffffff;
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
-  /* Fonts */
-  --fs-small: ;
-  --fs-reg: ;
-  --fs-med: ;
-  --fs-large: 2.3rem;
-  --fs-xl: ;
-
-  --ff-family: 'Lexend', sans-serif;
+.lexend-thin {
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 }
 
+:root {
+  --clr-background: #111111;
+  --clr-background-ac: #212121;
+  --clr-header: #010101;
+  --clr-text: rgb(173, 169, 169);
+  --clr-link: rgb(128, 125, 125);
+  --clr-link-hover: rgba(128, 125, 125, 0.7);
+  --clr-border: #313535;
+  --clr-headline: #ffffff;
+
+  /* Fonts */
+  --fs-small: 0.875rem;
+  --fs-reg: 1.17rem;
+  --fs-med: 1.5rem;
+  --fs-large: 2rem;
+  --fs-xl: 2.3rem;
+
+  --ff-family: 'Lexend', systemUI;
+}
+
+/* ================================================ */
+/* Base styles */
+
 body {
-  background: var(--background);
-  color: var(--text);
+  background-color: var(--clr-background);
+  color: var(--clr-text);
+
+  font-family: var(--ff-family);
+  font-weight: 400;
+  font-style: normal;
+  font-optical-sizing: auto;
+  grid-template-columns: 1fr;
 }
 
 a {
-  color: var(--link);
+  color: var(--clr-link);
   transition: color 250ms ease-in-out;
 
   &:is(:hover, :focus) {
-    color: var(--link-hover);
+    color: var(--clr-link-hover);
   }
 }
-body {
-  grid-template-columns: 1fr;
-}
+
 h1,
 h2,
 h3 {
-  font-weight: 300;
+  font-weight: 200;
+  margin: 0.67em;
 }
 
 h1 {
-  color: var(--headline);
+  color: var(--clr-headline);
+  font-size: var(--fs-large);
+  line-height: 1;
 }
 
+h2 {
+  font-size: var(--fs-med);
+}
+
+h3 {
+  font-size: var(--fs-reg);
+}
+/* ================================================ */
+/* header */
+
 header {
+  background-color: var(--clr-header);
   padding: 0.725em;
-  border-color: var(--text);
+  border-color: var(--clr-text);
+  box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.9);
 }
 
 .header {
   --flex-dir: column;
-  --flex-gap: 0.875em;
+  --flex-gap: 0.5em;
   --flex-justify: center;
 
-  & h1 {
-    font-size: var(--fs-large);
+  & h1 a {
+    cursor: pointer;
+    font-size: var(--fs-xl);
     line-height: 1;
+    color: #ffffff;
   }
 }
 
@@ -65,14 +97,17 @@ header {
 }
 
 .nav__list {
-  display: flex;
-  flex-direction: row;
-  gap: 0.25rem;
-  align-items: center;
+  --flex-dir: row;
+  --flex-gap: 0.25rem;
+  --flex-align: center;
+
+  flex-wrap: wrap;
+  margin: 0;
 }
 
 .nav__link {
-  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-size: var(--fs-reg);
   padding: 0.25em 0.5em;
   border-radius: 10px;
   transition: all 250ms ease-in;
