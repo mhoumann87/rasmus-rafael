@@ -22,14 +22,23 @@
   width: 95%;
   max-width: 1800px;
 }
+
+/* Set the are as a grid */
 .grid {
   display: grid;
 }
 
+/* set the page to three rows, for pages without a hero area */
+.row-3 {
+  grid-template-rows: auto 1fr auto;
+}
+
+/* Set page to four rows, for pages that uses a hero area */
 .row-4 {
   grid-template-rows: auto auto 1fr auto;
 }
 
+/* Ser area as a flex area, user css variables to customize the area */
 .flex {
   display: flex;
   flex-direction: var(--flex-dir, row);
@@ -38,13 +47,15 @@
   gap: var(--flex-gap, 1em);
 }
 
+/* Set a border on top of the area */
 .divider-top {
   border-top: solid var(--border-top, 3px) var(--text);
   padding-block-start: var(--divider-padding, 2rem);
+  border-block-start-color: var(--clr-text);
 }
 
 .divider-bottom {
   border-block-end-style: solid;
   border-block-end-width: var(--border-width, 3px);
-  padding-block-end: 2em;
+  border-block-end-color: var(--clr-text);
 }
