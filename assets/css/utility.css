@@ -49,9 +49,10 @@
 
 /* Set a border on top of the area */
 .divider-top {
-  border-top: solid var(--border-top, 3px) var(--text);
-  padding-block-start: var(--divider-padding, 2rem);
+  border-block-start-style: solid;
+  border-block-start-width: var(--border-top, 3px);
   border-block-start-color: var(--clr-text);
+  padding-block-start: var(--divider-padding, 1rem);
 }
 
 .divider-bottom {
