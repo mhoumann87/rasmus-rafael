@@ -60,3 +60,12 @@
   border-block-end-width: var(--border-width, 3px);
   border-block-end-color: var(--clr-text);
 }
+
+/* When you need light or dark text for an image overlay */
+.light-text {
+  color: var(--clr-text);
+}
+
+.dark-text {
+  color: var(--clr-header);
+}
