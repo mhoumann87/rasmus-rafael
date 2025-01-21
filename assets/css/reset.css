@@ -76,7 +76,7 @@ article > * + * {
   margin-top: 1em;
 }
 
-/* Make the hr line consitant between browsers */
+/* Make the hr line consistent between browsers */
 hr {
   border-style: solid;
   border-width: 1px 0 0;
