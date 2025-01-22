@@ -69,3 +69,16 @@
 .dark-text {
   color: var(--clr-header);
 }
+
+/* Set a margin top bottom and both */
+.margin-top {
+  margin-block-start: var(--margin, 1rem);
+}
+
+.margin-bottom {
+  margin-block-end: var(--margin, 1rem);
+}
+
+.margin-both {
+  margin-block: var(--margin, 1rem);
+}
