@@ -121,9 +121,30 @@ header {
 /* ================================================ */
 
 /* Contact page */
-.contact {
-  grid-template-areas {
-  }
+main .contact {
+  grid-template-areas:
+    'photo info info'
+    'mail social';
+}
+
+.portrait-box {
+  grid-area: photo;
+  background: crimson;
+}
+
+.info-box {
+  grid-area: info;
+  background: greenyellow;
+}
+
+.main-info {
+  grid-area: mail;
+  background: steelblue;
+}
+
+.contact-social {
+  grid-area: social;
+  background: hotpink;
 }
 
 /* ================================================ */
