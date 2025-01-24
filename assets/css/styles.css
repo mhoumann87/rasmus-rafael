@@ -122,9 +122,12 @@ header {
 
 /* Contact page */
 main .contact {
-  grid-template-areas:
+  background-color: orangered;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2;
+  /* grid-template-areas:
     'photo info info'
-    'mail social';
+    'mail . social'; */
 }
 
 .portrait-box {
