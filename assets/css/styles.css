@@ -122,11 +122,9 @@ header {
 
 /* Contact page */
 .contact {
-  background-color: orangered;
-  display: grid;
   grid-template-areas:
     'photo info info'
-    'mail . social';
+    'mail social social';
 }
 
 .portrait-box {
@@ -135,8 +133,8 @@ header {
 }
 
 .info-box {
+  --flex-align: flex-start;
   grid-area: info;
-  background: yellowgreen;
 }
 
 .mail-info {
@@ -153,7 +151,6 @@ header {
 /* Footer */
 footer {
   margin-block-start: 2rem;
-  border-top-color: red;
 }
 .footer {
   --flex-dir: column;

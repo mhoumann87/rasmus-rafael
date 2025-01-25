@@ -26,6 +26,7 @@
 /* Set the are as a grid */
 .grid {
   display: grid;
+  gap: var(--grid-gap, 1rem);
 }
 
 /* set the page to three rows, for pages without a hero area */
