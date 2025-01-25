@@ -121,13 +121,12 @@ header {
 /* ================================================ */
 
 /* Contact page */
-main .contact {
+.contact {
   background-color: orangered;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 2;
-  /* grid-template-areas:
+  display: grid;
+  grid-template-areas:
     'photo info info'
-    'mail . social'; */
+    'mail . social';
 }
 
 .portrait-box {
@@ -137,10 +136,10 @@ main .contact {
 
 .info-box {
   grid-area: info;
-  background: greenyellow;
+  background: yellowgreen;
 }
 
-.main-info {
+.mail-info {
   grid-area: mail;
   background: steelblue;
 }
