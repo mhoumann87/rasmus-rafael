@@ -37,6 +37,8 @@ body {
 a {
   color: var(--clr-link);
   transition: color 250ms ease-in-out;
+  text-decoration: underline;
+  cursor: pointer;
 
   &:is(:hover, :focus) {
     color: var(--clr-link-hover);
@@ -104,6 +106,7 @@ header {
   padding: 0.25em 0.5em;
   border-radius: 10px;
   transition: all 250ms ease-in;
+  text-decoration: none;
 
   &:is(:hover, :focus) {
     color: var(--link);
@@ -125,11 +128,18 @@ header {
   grid-template-areas:
     'photo info info'
     'mail social social';
+  row-gap: 2rem;
 }
 
 .portrait-box {
   grid-area: photo;
-  background: crimson;
+
+  & img {
+    margin-inline: auto;
+    max-width: 450px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
 }
 
 .info-box {
@@ -139,12 +149,28 @@ header {
 
 .mail-info {
   grid-area: mail;
-  background: steelblue;
+
+  & h2 {
+    margin: 0 0 0.5em 0;
+    font-size: var(--fs-large);
+  }
+
+  & p {
+    margin-block-end: 0.5em;
+  }
+
+  & .large-text {
+    font-size: var(--fs-med);
+  }
 }
 
 .contact-social {
   grid-area: social;
-  background: hotpink;
+  --flex-justify: center;
+
+  & svg {
+    width: 68px;
+  }
 }
 
 /* ================================================ */
