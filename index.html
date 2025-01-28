@@ -20,6 +20,8 @@
     />
   </head>
   <body class="grid row-4">
+    <a href="#main" class="skip-to-content">Skip to content</a>
+
     <header>
       <div class="header wrapper flex">
         <section class="logo-box">
@@ -110,7 +112,7 @@
         </div>
       </div>
 
-      <div class="navigation">
+      <div class="navigation" aria-role="Navigation for slider">
         <svg
           id="left"
           class="prev-btn"
@@ -149,7 +151,8 @@
       </div>
     </section>
 
-    <main class="grid wrapper"><h1>Main</h1></main>
+    <!-- IMPORTANT to give the <main> part of the page an id of main, for use to jump over everything on top of the page -->
+    <main id="main" class="grid wrapper"><h1>Main</h1></main>
 
     <footer class="divider-top">
       <div class="footer wrapper flex">

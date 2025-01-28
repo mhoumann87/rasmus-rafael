@@ -35,7 +35,8 @@ section {
 /* and set the scrolling behavior to smooth, only affects elements if you jump to a link on the page, and it is only for the people that don't have set browser behavior to reduced motion, and set a padding on top of the element we scroll to */
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
-    scroll-padding-block-start: 3rem;
+    scroll-padding-block-start: 2rem;
+    scroll-behavior: smooth;
   }
 }
 
