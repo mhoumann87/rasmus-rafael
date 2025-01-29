@@ -126,9 +126,19 @@ header {
 /* Contact page */
 .contact {
   grid-template-areas:
-    'photo info info'
-    'mail social social';
-  row-gap: 2rem;
+    'photo'
+    'info'
+    'mail'
+    'social';
+}
+
+@media (width > 750px) {
+  .contact {
+    grid-template-areas:
+      'photo info info'
+      'mail social social';
+    row-gap: 2rem;
+  }
 }
 
 .portrait-box {
@@ -136,15 +146,23 @@ header {
 
   & img {
     margin-inline: auto;
-    max-width: 450px;
+    width: 450px;
     aspect-ratio: 1;
     border-radius: 50%;
   }
 }
 
 .info-box {
-  --flex-align: flex-start;
+  --flex-dir: column;
+  --flex-justify: center;
   grid-area: info;
+}
+
+@media (width > 950px) {
+  .info-box {
+    --flex-dir: row;
+    --flex-align: flex-start;
+  }
 }
 
 .mail-info {
@@ -165,11 +183,19 @@ header {
 }
 
 .contact-social {
-  grid-area: social;
+  --flex-dir: column;
   --flex-justify: center;
+
+  grid-area: social;
 
   & svg {
     width: 68px;
+  }
+}
+
+@media (width > 500px) {
+  .contact-social {
+    --flex-dir: row;
   }
 }
 

@@ -34,8 +34,10 @@
 }
 
 @media (width > 750px) {
-  width: 95%;
-  max-width: 1800px;
+  .wrapper {
+    width: 95%;
+    max-width: 1800px;
+  }
 }
 
 /* Set the are as a grid */
