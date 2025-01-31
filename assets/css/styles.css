@@ -123,7 +123,22 @@ header {
 /* Pages */
 /* ================================================ */
 
-/* Contact page */
+/* Home page -index.html */
+.intro {
+  --flex-dir: column;
+
+  & .img-box {
+    flex-shrink: 2;
+  }
+}
+
+@media (width > 750px) {
+  .intro {
+    --flex-dir: row;
+  }
+}
+
+/* Contact page - contact.html*/
 .contact {
   grid-template-areas:
     'photo'
