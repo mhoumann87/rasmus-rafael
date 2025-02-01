@@ -74,7 +74,7 @@ figcaption {
 
 /* Natural flow and rhythm in articles by default by adding a margin top on an article that comes after another */
 article > * + * {
-  margin-top: 1em;
+  margin-block-start: 1em;
 }
 
 /* Make the hr line consistent between browsers */
