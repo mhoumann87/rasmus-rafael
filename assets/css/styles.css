@@ -130,6 +130,14 @@ header {
   & .img-box {
     flex-shrink: 2;
   }
+
+  & article > * + * {
+    margin-block-start: none;
+  }
+
+  & h2 {
+    margin: 0;
+  }
 }
 
 @media (width > 750px) {
@@ -137,6 +145,8 @@ header {
     --flex-dir: row;
   }
 }
+
+.
 
 /* Contact page - contact.html*/
 .contact {
