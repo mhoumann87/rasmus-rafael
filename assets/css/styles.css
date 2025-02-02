@@ -126,6 +126,7 @@ header {
 /* Home page -index.html */
 .intro {
   --flex-dir: column;
+  --flex-align: flex-start;
 
   & .img-box {
     flex-shrink: 2;
@@ -140,7 +141,7 @@ header {
   }
 }
 
-@media (width > 750px) {
+@media (width > 900px) {
   .intro {
     --flex-dir: row;
   }
