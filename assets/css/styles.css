@@ -132,12 +132,13 @@ header {
     flex-shrink: 2;
   }
 
-  & article > * + * {
-    margin-block-start: none;
+  & h2 {
+    margin: -0.5rem 0 0 0;
+    padding: 0;
   }
 
-  & h2 {
-    margin: 0;
+  & p {
+    margin-block-end: 1em;
   }
 }
 
