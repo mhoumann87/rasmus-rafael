@@ -27,7 +27,7 @@ body {
   background-color: var(--clr-background);
   color: var(--clr-text);
 
-  font-family: var(--ff-family);
+  font-family: var(--ff-family), system-ui, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-optical-sizing: auto;
